@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  csgoserver:
+    build: .
+    ports:
+      - "27015:27015/tcp"
+      - "27015:27015/udp"
+      - "27020:27020/udp"
+      - "27005:27005/udp"
+      - "2222:22/tcp"
+    volumes:
+      - logs:/home/steam/linuxgsm/csgoserver/lgsm/logs
+volumes:
+  logs:
