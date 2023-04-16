@@ -59,7 +59,11 @@ RUN mkdir -p /home/csgoserver/lgsm-servers \
     && cd /home/csgoserver/lgsm-servers \
     && wget -O linuxgsm.sh https://linuxgsm.sh \
     && chmod +x linuxgsm.sh \
-    && ./linuxgsm.sh csgoserver
+    && bash linuxgsm.sh csgoserver
+
+WORKDIR /home/csgoserver/lgsm-servers/csgoserver
+
+RUN ./csgoserver install
 
 # Expose the CS:GO server ports
 EXPOSE 27015/tcp
