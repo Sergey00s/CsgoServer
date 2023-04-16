@@ -69,4 +69,4 @@ EXPOSE 27020/udp
 
 
 # Start the server
-ENTRYPOINT ["/bin/bash", "csgoserver", "start"]
+ENTRYPOINT ["csgoserver", "start"]
